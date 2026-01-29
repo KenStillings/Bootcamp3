@@ -220,6 +220,20 @@ function TaskList({ onEdit }) {
                   }}
                 />
               )}
+              {/* Priority badge */}
+              <Chip
+                label={(task.priority || 'P3')}
+                size="small"
+                sx={{
+                  height: 20,
+                  fontSize: '0.7rem',
+                  fontWeight: 600,
+                  color: 'white',
+                  background:
+                    (task.priority === 'P1') ? '#f44336' :
+                    (task.priority === 'P2') ? '#ff9800' : '#9e9e9e'
+                }}
+              />
               <Box 
                 sx={{ 
                   display: 'flex', 
